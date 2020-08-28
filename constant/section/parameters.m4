@@ -1,0 +1,9 @@
+define(xle, calc(R+0.01)) dnl
+define(yle, 0.1) dnl
+define(r, 0.005) dnl
+define(xte, calc(R+0.005)) dnl
+define(yte, -0.1) dnl
+define(xinn, 0.3550248134393431) dnl
+define(yinn, 0.10049751249899798) dnl
+define(xout, 0.3649937539038101) dnl
+define(yout, 0.09975015615240475) dnl

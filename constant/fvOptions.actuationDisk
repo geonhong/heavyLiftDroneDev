@@ -1,0 +1,41 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      fvOptions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+propeller
+{
+    type            actuationDiskSource;
+    variant         Froude;     // variableScaling;
+    selectionMode   cellSet;
+    cellSet         prop;
+    diskArea        0.09621;
+    diskDir         (0 1 0);
+    writeToFile     true;
+    sink            true;
+    Cp              0.3;
+    Ct              0.6;
+    monitorMethod   points;
+    monitorCoeffs
+    {
+		points
+		(
+			(0 1 0)
+		);
+    }
+}
+
+
+// ************************************************************************* //
